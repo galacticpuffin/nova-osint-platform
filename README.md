@@ -51,3 +51,23 @@ A lot of people have no visibility into their own exposure online. This project 
 This project is actively being built and iterated on.
 
 Some implementation details, integrations, and backend logic are kept private while development is ongoing.
+
+## Architecture (high level)
+
+NOVA is structured as a full stack application with a frontend, backend logic layer, and external data integrations.
+
+The frontend is built with React and Next.js. It handles user input, triggers scan workflows, and displays results in a structured way.
+
+The backend uses serverless functions to process requests and handle API interactions. This layer is responsible for collecting data, shaping it into a consistent format, and preparing it for output.
+
+When a user runs a scan, the request moves through a flow where data is gathered, interpreted, and then returned to the interface. Some parts of this flow include early AI based processing to help organize or summarize results.
+
+The system is being built in a way that allows new data sources and workflows to be added over time without changing the core structure.
+
+## Future direction
+
+The next phase of the project is focused on improving how data is connected and interpreted.
+
+This includes expanding identity correlation, improving how exposure and risk are represented, and continuing to build out agent style workflows that can automate parts of the investigation process.
+
+There is also ongoing work around making the output more useful and readable from a user perspective.
